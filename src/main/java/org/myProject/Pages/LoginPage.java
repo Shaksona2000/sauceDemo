@@ -1,11 +1,14 @@
 package org.myProject.Pages;
 
 import io.qameta.allure.Step;
+import org.myProject.Utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
     private WebDriver driver;
+    private WaitUtils waitUtils;
+
 
     private By usernameField = By.id("user-name");
     private By passwordField = By.id("password");
@@ -14,6 +17,9 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        this.waitUtils = new WaitUtils(driver);
+
+
     }
 
     @Step("Login with username: {0}, password: {1}")
@@ -26,4 +32,6 @@ public class LoginPage {
     public String getErrorMessage() {
         return driver.findElement(errorMessage).getText();
     }
+
+
 }

@@ -4,6 +4,7 @@
         <classes>
             <class name="org.myProject.Utils.BaseTest"/>
             <class name="myProject.Tests.PurchaseTest"/>
+            <class name="myProject.Tests.LoginTest"/>
         </classes>
     </test>
 </suite>
