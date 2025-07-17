@@ -3,7 +3,9 @@ package myProject.Tests;
 import org.myProject.Utils.BaseTest;
 import org.myProject.Pages.InventoryPage;
 import org.myProject.Pages.LoginPage;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+@Listeners(org.myProject.Listeners.VideoListener.class)
 
 public class PurchaseTest extends BaseTest {
 

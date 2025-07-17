@@ -4,11 +4,15 @@ import io.qameta.allure.Step;
 import org.myProject.Utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
     private WebDriver driver;
     private WaitUtils waitUtils;
 
+    @FindBy (id = "user-name")
+    WebElement username;
 
     private By usernameField = By.id("user-name");
     private By passwordField = By.id("password");

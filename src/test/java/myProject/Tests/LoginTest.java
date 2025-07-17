@@ -5,7 +5,10 @@ import org.myProject.Pages.InventoryPage;
 import org.myProject.Pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+@Listeners(org.myProject.Listeners.VideoListener.class)
 
 public class LoginTest extends BaseTest {
 
